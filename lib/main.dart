@@ -82,4 +82,11 @@ class _FormPageState extends State<FormPage> {
           children: [
             Form(
               key: _formKey,
-              
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Task Date & Time:", style: TextStyle(fontSize: 16)),
+                      
