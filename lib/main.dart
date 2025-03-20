@@ -58,3 +58,13 @@ class _FormPageState extends State<FormPage> {
       _selectedDateTime = null;
     }
   }
+
+  void _toggleTaskDone(int index, bool? value) {
+    setState(() {
+      tasks[index] = TaskTileData(
+        task: tasks[index].task,
+        deadline: tasks[index].deadline,
+        isDone: value ?? false,
+      );
+    });
+  }
