@@ -102,4 +102,8 @@ class _FormPageState extends State<FormPage> {
                       ),
                     ],
                   ),
+                  if (_selectedDateTime == null)
+                    Text("Please select a date and time", style: TextStyle(color: Colors.red)),
+                  SizedBox(height: 10),
+                  Text("First Name", style: TextStyle(fontSize: 16, color: Colors.red)),
                   
