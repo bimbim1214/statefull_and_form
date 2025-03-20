@@ -32,4 +32,15 @@ class _FormPageState extends State<FormPage> {
       firstDate: DateTime(2000),
       lastDate: DateTime(2100),
     );
-    
+    if (pickedDate != null) {
+      TimeOfDay? pickedTime = await showTimePicker(
+        context: context,
+        initialTime: TimeOfDay.now(),
+      );  
+      if (pickedTime != null) {
+        setState(() {
+          _selectedDateTime = DateTime(pickedDate.year, pickedDate.month, pickedDate.day, pickedTime.hour, pickedTime.minute);
+        });
+      }
+    }
+  }
