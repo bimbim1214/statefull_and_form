@@ -157,3 +157,8 @@ class _FormPageState extends State<FormPage> {
     );
   }
 }
+
+class TaskTileData {
+  final String task;
+  final String deadline;
+  final bool isDone;
