@@ -89,4 +89,17 @@ class _FormPageState extends State<FormPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text("Task Date & Time:", style: TextStyle(fontSize: 16)),
-                      
+                      Row(
+                        children: [
+                          Text(_selectedDateTime == null
+                              ? "Select date & time"
+                              : "${_selectedDateTime!.toLocal()}".split('.')[0]),
+                          IconButton(
+                            icon: Icon(Icons.calendar_today),
+                            onPressed: () => _pickDateTime(context),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  
