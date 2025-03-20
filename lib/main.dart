@@ -172,3 +172,6 @@ class TaskTile extends StatelessWidget {
   final bool isDone;
   final ValueChanged<bool?>? onChanged;
 
+  TaskTile({required this.task, required this.deadline, required this.isDone, required this.onChanged});
+
+  
