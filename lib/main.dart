@@ -174,4 +174,19 @@ class TaskTile extends StatelessWidget {
 
   TaskTile({required this.task, required this.deadline, required this.isDone, required this.onChanged});
 
-  
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        title: Text(task, style: TextStyle(fontWeight: FontWeight.bold)),
+        subtitle: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("Deadline: $deadline", style: TextStyle(color: Colors.grey[700])),
+            Text(
+              isDone ? "Done" : "Not Done",
+              style: TextStyle(color: isDone ? Colors.green : Colors.red),
+            ),
+          ],
+        ),
+        
