@@ -44,3 +44,17 @@ class _FormPageState extends State<FormPage> {
       }
     }
   }
+
+  void _addTask() {
+    if (_formKey.currentState!.validate() && _selectedDateTime != null) {
+      setState(() {
+        tasks.add(TaskTileData(
+          task: _nameController.text,
+          deadline: "${_selectedDateTime!.toLocal()}".split('.')[0],
+          isDone: false,
+        ));
+      });
+      _nameController.clear();
+      _selectedDateTime = null;
+    }
+  }
