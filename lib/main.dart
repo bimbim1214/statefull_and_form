@@ -189,4 +189,11 @@ class TaskTile extends StatelessWidget {
             ),
           ],
         ),
-        
+        trailing: Checkbox(
+          value: isDone,
+          onChanged: onChanged,
+        ),
+      ),
+    );
+  }
+}
